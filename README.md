@@ -41,7 +41,7 @@ Raw data files are **not stored in this repository** because of their size. The 
 ```
 nsaid-adverse-events-capstone/
 ├── README.md                        This file
-├── requirements.txt                 Pinned Python package versions
+├── requirements.txt                 Pinned Python package versions 
 ├── .gitignore                       Excludes raw data and temporary files
 ├── data/
 │   ├── raw/                         Downloaded openFDA JSON (not committed)
@@ -69,14 +69,14 @@ nsaid-adverse-events-capstone/
    cd nsaid-adverse-events-capstone
    ```
 
-2. **Create a virtual environment and install packages**
+2.  **Create a virtual environment and install packages** *(requirements file added in the interim stage)*
    ```bash
    python -m venv venv
    source venv/bin/activate        # Windows: venv\Scripts\activate
    pip install -r requirements.txt
    ```
 
-3. **Verify the data** (report counts, serious proportions, completeness, and minimum sample sizes)
+3. **Verify the data** *(script added in the interim stage)* (report counts, serious proportions, completeness, and minimum sample sizes)
    ```bash
    python src/verify_fda_data.py
    ```
@@ -99,12 +99,12 @@ All random processes use a fixed seed (`42`) so results are reproducible.
 
 | Stage | Submission | Status |
 |-------|------------|--------|
-| Topic, data verification, synopsis | Synopsis (Oct 13) 
-| Data download, cleaning, EDA | Interim draft (Oct 20)
-| RQ1–RQ3 hypothesis tests, baseline model | Interim report (Oct 27) 
-| RQ4 models, DeLong test, SHAP | Final report draft (Nov 3) 
-| Presentation | Nov 29 
-| Final report | Dec 13 
+| Topic, data verification, synopsis | Synopsis (Oct 13) | Complete |
+| Data download, cleaning, EDA | Interim draft (Oct 20) | In progress |
+| RQ1–RQ3 hypothesis tests, baseline model | Interim report (Oct 27) | Planned |
+| RQ4 models, DeLong test, SHAP | Final report draft (Nov 3) | Planned |
+| Presentation | Nov 29 | Planned |
+| Final report | Dec 13 | Planned |
 
 This README is updated as each stage is completed.
 
