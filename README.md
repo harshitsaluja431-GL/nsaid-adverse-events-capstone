@@ -37,7 +37,7 @@ Raw data files are **not stored in this repository** because of their size. The 
 ---
 
 ## Repository structure
-
+*Planned structure; files are added as each stage is completed.*
 ```
 nsaid-adverse-events-capstone/
 ├── README.md                        This file
@@ -87,7 +87,7 @@ nsaid-adverse-events-capstone/
    python src/download_and_clean.py
    ```
 
-5. **Run the notebooks in order:** `01_eda.ipynb` → `02_hypothesis_tests.ipynb` → `03_models.ipynb`.
+5. **Run the notebooks in order** *(added in the interim and final stages)*: `01_eda.ipynb` → `02_hypothesis_tests.ipynb` → `03_models.ipynb`.
 
 All random processes use a fixed seed (`42`) so results are reproducible.
 
