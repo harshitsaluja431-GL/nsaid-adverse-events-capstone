@@ -1,0 +1,10 @@
+step,reports
+Raw reports downloaded,31666
+After removing duplicates,30616
+After keeping exactly one NSAID,29595
+After keeping single-animal reports,29219
+Impossible ages set to missing,1
+Impossible weights set to missing,11
+FINAL clean reports,29219
+Reports with both age and weight (RQ3),26712
+Serious reports,14197
