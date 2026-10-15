@@ -1,7 +1,7 @@
 # Serious Adverse Reactions to NSAIDs in Dogs and Cats
 
 **QM 640 Data Analytics Capstone, Walsh College**
-Author: Harshit Saluja
+Author: Harshit Saluja · Mentor: Pralhad Teggi · Third Term, 2026
 
 This project analyzes U.S. FDA adverse event reports for nonsteroidal anti-inflammatory drugs (NSAIDs), the painkillers most commonly prescribed to dogs and cats. It identifies which report characteristics are associated with a report being classified as **serious**, and builds an explainable machine learning model that predicts seriousness for new reports.
 
@@ -37,11 +37,11 @@ Raw data files are **not stored in this repository** because of their size. The 
 ---
 
 ## Repository structure
-*Planned structure; files are added as each stage is completed.*
+
 ```
 nsaid-adverse-events-capstone/
 ├── README.md                        This file
-├── requirements.txt                 Pinned Python package versions 
+├── requirements.txt                 Pinned Python package versions
 ├── .gitignore                       Excludes raw data and temporary files
 ├── data/
 │   ├── raw/                         Downloaded openFDA JSON (not committed)
@@ -69,14 +69,14 @@ nsaid-adverse-events-capstone/
    cd nsaid-adverse-events-capstone
    ```
 
-2.  **Create a virtual environment and install packages** *(requirements file added in the interim stage)*
+2. **Create a virtual environment and install packages**
    ```bash
    python -m venv venv
    source venv/bin/activate        # Windows: venv\Scripts\activate
    pip install -r requirements.txt
    ```
 
-3. **Verify the data** *(script added in the interim stage)* (report counts, serious proportions, completeness, and minimum sample sizes)
+3. **Verify the data** (report counts, serious proportions, completeness, and minimum sample sizes)
    ```bash
    python src/verify_fda_data.py
    ```
@@ -87,7 +87,7 @@ nsaid-adverse-events-capstone/
    python src/download_and_clean.py
    ```
 
-5. **Run the notebooks in order** *(added in the interim and final stages)*: `01_eda.ipynb` → `02_hypothesis_tests.ipynb` → `03_models.ipynb`.
+5. **Run the notebooks in order:** `01_eda.ipynb` → `02_hypothesis_tests.ipynb` → `03_models.ipynb`.
 
 All random processes use a fixed seed (`42`) so results are reproducible.
 
@@ -99,17 +99,23 @@ All random processes use a fixed seed (`42`) so results are reproducible.
 
 | Stage | Submission | Status |
 |-------|------------|--------|
-| Topic, data verification, synopsis | Synopsis (Oct 13) | Complete |
-| Data download, cleaning, EDA | Interim draft (Oct 20) | In progress |
-| RQ1–RQ3 hypothesis tests, baseline model | Interim report (Oct 27) | Planned |
-| RQ4 models, DeLong test, SHAP | Final report draft (Nov 3) | Planned |
-| Presentation | Nov 29 | Planned |
-| Final report | Dec 13 | Planned |
+| Topic, data verification, synopsis | Synopsis (Oct 13) | ✅ Complete |
+| Data download, cleaning, EDA | Interim draft (Oct 20) | ⏳ In progress |
+| RQ1–RQ3 hypothesis tests, baseline model | Interim report (Oct 27) | ⬜ Planned |
+| RQ4 models, DeLong test, SHAP | Final report draft (Nov 3) | ⬜ Planned |
+| Presentation | Nov 29 | ⬜ Planned |
+| Final report | Dec 13 | ⬜ Planned |
 
 This README is updated as each stage is completed.
 
-
+---
 
 ## Data citation
 
 U.S. Food and Drug Administration. (2026). *openFDA animal and veterinary adverse event reports* [Data set]. https://open.fda.gov/apis/animalandveterinary/event/
+
+---
+
+## Disclaimer
+
+This is an academic project. The analysis describes reporting patterns in voluntary surveillance data and is not veterinary advice. The prediction model is a research prototype, not a clinical decision tool.
