@@ -13,7 +13,7 @@ This project analyzes U.S. FDA adverse event reports for nonsteroidal anti-infla
 
 | File | What it is |
 |------|------------|
-| `Capstone_Analysis_Complete.ipynb` | **All analysis code**, in order: download, cleaning, EDA, RQ1–RQ4, model comparison, DeLong test, SHAP, assumption checks, and sensitivity analysis |
+| `Capstone_Analysis_Complete.ipynb` | **All analysis code**, in order: download, cleaning, EDA, RQ1–RQ4, model comparison, DeLong test, SHAP, assumption checks and sensitivity analysis |
 | `data/nsaid_reports_clean.csv` | The cleaned dataset: 29,219 reports, one row per report |
 | `data/cleaning_log.csv` | Number of reports remaining after each cleaning step |
 | `figures/` | Charts used in the reports |
@@ -47,7 +47,6 @@ The data is public and contains no personal information. No Kaggle or synthetic 
 
 1. Open `Capstone_Analysis_Complete.ipynb` in Google Colab (**File → Upload notebook**).
 2. Click **Runtime → Run all**. The notebook downloads the reports directly from the FDA, cleans them, and runs every analysis.
-3. Total run time is about 15–25 minutes; the model tuning steps take the longest.
 
 The FDA adds new reports over time, so a fresh download may differ slightly. To reproduce the exact results in the reports, use `data/nsaid_reports_clean.csv`, the cleaned dataset used for the analysis. All random steps use a fixed seed (42), and the data is sorted by report ID before the train/test split.
 
