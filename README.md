@@ -13,11 +13,11 @@ This project analyzes U.S. FDA adverse event reports for nonsteroidal anti-infla
 
 | File | What it is |
 |------|------------|
-| `Capstone_Analysis_Complete.ipynb` | **All analysis code**, in order: download, cleaning, EDA, RQ1–RQ4, model comparison, DeLong test, SHAP, assumption checks and sensitivity analysis |
+| `Capstone_Analysis_Complete.ipynb` | **All analysis code**, in order: download, cleaning, EDA, RQ1–RQ4, model comparison, DeLong test, SHAP, assumption checks, sensitivity analysis, and the final-report additions (SHAP direction, spline comparison, adjustment for newer reports, confusion matrix) |
 | `data/nsaid_reports_clean.csv` | The cleaned dataset: 29,219 reports, one row per report |
 | `data/cleaning_log.csv` | Number of reports remaining after each cleaning step |
 | `figures/` | Charts used in the reports |
-| `results/` | Result tables (model comparison, DeLong test, future-report comparison, SHAP importance) |
+| `results/` | Result tables (model comparison, DeLong test, future-report comparison, SHAP importance and direction, adjustment for newer reports) |
 
 ---
 
@@ -46,9 +46,10 @@ The data is public and contains no personal information. No Kaggle or synthetic 
 ## How to run
 
 1. Open `Capstone_Analysis_Complete.ipynb` in Google Colab (**File → Upload notebook**).
-2. Click **Runtime → Run all**. The notebook downloads the reports directly from the FDA, cleans them, and runs every analysis.
+2. **To reproduce the reported results exactly** (recommended): click the cell **"Optional: reproduce the reported results from the saved cleaned data"**, run it, then choose **Runtime → Run after**. This loads `data/nsaid_reports_clean.csv` from this repository instead of downloading new data.
+3. **To rebuild everything from the FDA source:** choose **Runtime → Run all**. The FDA adds new reports over time, so a fresh download may differ slightly from the reported results.
 
-The FDA adds new reports over time, so a fresh download may differ slightly. To reproduce the exact results in the reports, use `data/nsaid_reports_clean.csv`, the cleaned dataset used for the analysis. All random steps use a fixed seed (42), and the data is sorted by report ID before the train/test split.
+All random steps use a fixed seed (42), and the data is sorted by report ID before the train/test split. Running all cells takes about 5–10 minutes on a standard Colab CPU.
 
 **Packages:** pandas, numpy, scipy, statsmodels, scikit-learn, xgboost, shap, matplotlib (all available in Google Colab).
 
@@ -60,7 +61,8 @@ The FDA adds new reports over time, so a fresh download may differ slightly. To 
 |-------|------------|--------|
 | Topic, data verification, synopsis | Synopsis (Oct 13) | Complete |
 | Data cleaning, EDA, RQ1–RQ4 analysis | Interim report (Oct 20) | Complete |
-| Interpretation, recommendations | Final report (Dec 13) | In progress |
+| SHAP interpretation, model adjustment for newer reports, recommendations | Final report draft (Nov 10) | Complete |
+| Revisions after mentor feedback | Final report (Dec 13) | Pending |
 
 ---
 
