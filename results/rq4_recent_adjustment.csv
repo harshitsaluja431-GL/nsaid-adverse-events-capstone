@@ -1,0 +1,4 @@
+Approach,Threshold,Accuracy,Precision,Recall,F1,ROC-AUC,Predicted serious %,Mean predicted prob %
+No adjustment (0.5),0.5,0.632,0.743,0.59,0.658,0.702,47.637,48.749
+Recalibrated to 2024 serious rate,0.5,0.666,0.678,0.846,0.753,0.702,74.796,58.093
+Threshold tuned on 2024,0.38,0.661,0.662,0.885,0.758,0.702,80.174,48.749
